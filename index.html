@@ -1,0 +1,90 @@
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Malla Curricular - Comunicación Audiovisual</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: #f4f4f4;
+      padding: 20px;
+      margin: 0;
+    }
+    h1 {
+      text-align: center;
+      color: #2e2e2e;
+      margin-bottom: 40px;
+    }
+    .semestre {
+      max-width: 800px;
+      margin: 0 auto 50px auto;
+    }
+    .semestre h2 {
+      background-color: #00796b;
+      color: white;
+      padding: 12px;
+      border-radius: 8px;
+    }
+    .curso {
+      background-color: white;
+      border: 1px solid #ccc;
+      border-radius: 8px;
+      padding: 15px;
+      margin: 10px 0;
+      cursor: pointer;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+      transition: background 0.3s;
+    }
+    .curso:hover {
+      background-color: #e0f2f1;
+    }
+    .info {
+      display: none;
+      margin-top: 8px;
+      font-size: 14px;
+      color: #555;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>Malla Curricular - Comunicación Audiovisual</h1>
+
+  
+<!-- CICLO 1 -->
+<div class="semestre">
+  <h2>Ciclo 1</h2>
+  <div class="curso" onclick="toggleInfo(this)">Introducción a la Comunicación Audiovisual
+    <div class="info">Créditos: 4<br>Requisitos: Ninguno<br>Tipo: Teórico-Práctico</div>
+  </div>
+  <div class="curso" onclick="toggleInfo(this)">Teorías y Epistemologías de la Comunicación
+    <div class="info">Créditos: 4<br>Requisitos: Ninguno<br>Tipo: Teórico</div>
+  </div>
+  <div class="curso" onclick="toggleInfo(this)">Matemática General
+    <div class="info">Créditos: 4<br>Requisitos: Ninguno<br>Tipo: Teórico</div>
+  </div>
+  <div class="curso" onclick="toggleInfo(this)">Lengua y Comunicación
+    <div class="info">Créditos: 4<br>Requisitos: Ninguno<br>Tipo: Teórico</div>
+  </div>
+  <div class="curso" onclick="toggleInfo(this)">Desempeño Universitario
+    <div class="info">Créditos: 2<br>Requisitos: Ninguno<br>Tipo: Teórico</div>
+  </div>
+  <div class="curso" onclick="toggleInfo(this)">Filosofía
+    <div class="info">Créditos: 3<br>Requisitos: Ninguno<br>Tipo: Teórico</div>
+  </div>
+</div>
+
+<!-- CICLOS 2 AL 10 -->
+<!-- Aquí irían los bloques completos del ciclo 2 al 10, construidos como ya hicimos en pasos anteriores. -->
+
+
+  <script>
+    function toggleInfo(element) {
+      const info = element.querySelector('.info');
+      info.style.display = (info.style.display === 'block') ? 'none' : 'block';
+    }
+  </script>
+
+</body>
+</html>
