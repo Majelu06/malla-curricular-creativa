@@ -34,10 +34,14 @@
       margin: 10px 0;
       cursor: pointer;
       box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-      transition: background 0.3s;
+      transition: background 0.3s, color 0.3s;
+      color: #666;
+      position: relative;
     }
-    .curso:hover {
-      background-color: #e0f2f1;
+    .curso.open {
+      background-color: #e0f7fa;
+      color: #000;
+      text-decoration: line-through;
     }
     .info {
       display: none;
@@ -45,46 +49,120 @@
       font-size: 14px;
       color: #555;
     }
+    .curso.open .info {
+      display: block;
+    }
   </style>
 </head>
 <body>
 
-  <h1>Malla Curricular - Comunicación Audiovisual</h1>
+<h1>Malla Curricular - Comunicación Audiovisual</h1>
 
-  
-<!-- CICLO 1 -->
 <div class="semestre">
   <h2>Ciclo 1</h2>
-  <div class="curso" onclick="toggleInfo(this)">Introducción a la Comunicación Audiovisual
-    <div class="info">Créditos: 4<br>Requisitos: Ninguno<br>Tipo: Teórico-Práctico</div>
+  <div class="curso" onclick="toggleInfo(this)">Curso de Ejemplo 1A
+    <div class="info">Créditos: 4<br>Requisitos: Curso anterior<br>Tipo: Teórico</div>
   </div>
-  <div class="curso" onclick="toggleInfo(this)">Teorías y Epistemologías de la Comunicación
-    <div class="info">Créditos: 4<br>Requisitos: Ninguno<br>Tipo: Teórico</div>
-  </div>
-  <div class="curso" onclick="toggleInfo(this)">Matemática General
-    <div class="info">Créditos: 4<br>Requisitos: Ninguno<br>Tipo: Teórico</div>
-  </div>
-  <div class="curso" onclick="toggleInfo(this)">Lengua y Comunicación
-    <div class="info">Créditos: 4<br>Requisitos: Ninguno<br>Tipo: Teórico</div>
-  </div>
-  <div class="curso" onclick="toggleInfo(this)">Desempeño Universitario
-    <div class="info">Créditos: 2<br>Requisitos: Ninguno<br>Tipo: Teórico</div>
-  </div>
-  <div class="curso" onclick="toggleInfo(this)">Filosofía
-    <div class="info">Créditos: 3<br>Requisitos: Ninguno<br>Tipo: Teórico</div>
+  <div class="curso" onclick="toggleInfo(this)">Curso de Ejemplo 1B
+    <div class="info">Créditos: 3<br>Requisitos: Ninguno<br>Tipo: Práctico</div>
   </div>
 </div>
 
-<!-- CICLOS 2 AL 10 -->
-<!-- Aquí irían los bloques completos del ciclo 2 al 10, construidos como ya hicimos en pasos anteriores. -->
+<div class="semestre">
+  <h2>Ciclo 2</h2>
+  <div class="curso" onclick="toggleInfo(this)">Curso de Ejemplo 2A
+    <div class="info">Créditos: 4<br>Requisitos: Curso anterior<br>Tipo: Teórico</div>
+  </div>
+  <div class="curso" onclick="toggleInfo(this)">Curso de Ejemplo 2B
+    <div class="info">Créditos: 3<br>Requisitos: Ninguno<br>Tipo: Práctico</div>
+  </div>
+</div>
 
+<div class="semestre">
+  <h2>Ciclo 3</h2>
+  <div class="curso" onclick="toggleInfo(this)">Curso de Ejemplo 3A
+    <div class="info">Créditos: 4<br>Requisitos: Curso anterior<br>Tipo: Teórico</div>
+  </div>
+  <div class="curso" onclick="toggleInfo(this)">Curso de Ejemplo 3B
+    <div class="info">Créditos: 3<br>Requisitos: Ninguno<br>Tipo: Práctico</div>
+  </div>
+</div>
 
-  <script>
-    function toggleInfo(element) {
-      const info = element.querySelector('.info');
-      info.style.display = (info.style.display === 'block') ? 'none' : 'block';
-    }
-  </script>
+<div class="semestre">
+  <h2>Ciclo 4</h2>
+  <div class="curso" onclick="toggleInfo(this)">Curso de Ejemplo 4A
+    <div class="info">Créditos: 4<br>Requisitos: Curso anterior<br>Tipo: Teórico</div>
+  </div>
+  <div class="curso" onclick="toggleInfo(this)">Curso de Ejemplo 4B
+    <div class="info">Créditos: 3<br>Requisitos: Ninguno<br>Tipo: Práctico</div>
+  </div>
+</div>
+
+<div class="semestre">
+  <h2>Ciclo 5</h2>
+  <div class="curso" onclick="toggleInfo(this)">Curso de Ejemplo 5A
+    <div class="info">Créditos: 4<br>Requisitos: Curso anterior<br>Tipo: Teórico</div>
+  </div>
+  <div class="curso" onclick="toggleInfo(this)">Curso de Ejemplo 5B
+    <div class="info">Créditos: 3<br>Requisitos: Ninguno<br>Tipo: Práctico</div>
+  </div>
+</div>
+
+<div class="semestre">
+  <h2>Ciclo 6</h2>
+  <div class="curso" onclick="toggleInfo(this)">Curso de Ejemplo 6A
+    <div class="info">Créditos: 4<br>Requisitos: Curso anterior<br>Tipo: Teórico</div>
+  </div>
+  <div class="curso" onclick="toggleInfo(this)">Curso de Ejemplo 6B
+    <div class="info">Créditos: 3<br>Requisitos: Ninguno<br>Tipo: Práctico</div>
+  </div>
+</div>
+
+<div class="semestre">
+  <h2>Ciclo 7</h2>
+  <div class="curso" onclick="toggleInfo(this)">Curso de Ejemplo 7A
+    <div class="info">Créditos: 4<br>Requisitos: Curso anterior<br>Tipo: Teórico</div>
+  </div>
+  <div class="curso" onclick="toggleInfo(this)">Curso de Ejemplo 7B
+    <div class="info">Créditos: 3<br>Requisitos: Ninguno<br>Tipo: Práctico</div>
+  </div>
+</div>
+
+<div class="semestre">
+  <h2>Ciclo 8</h2>
+  <div class="curso" onclick="toggleInfo(this)">Curso de Ejemplo 8A
+    <div class="info">Créditos: 4<br>Requisitos: Curso anterior<br>Tipo: Teórico</div>
+  </div>
+  <div class="curso" onclick="toggleInfo(this)">Curso de Ejemplo 8B
+    <div class="info">Créditos: 3<br>Requisitos: Ninguno<br>Tipo: Práctico</div>
+  </div>
+</div>
+
+<div class="semestre">
+  <h2>Ciclo 9</h2>
+  <div class="curso" onclick="toggleInfo(this)">Curso de Ejemplo 9A
+    <div class="info">Créditos: 4<br>Requisitos: Curso anterior<br>Tipo: Teórico</div>
+  </div>
+  <div class="curso" onclick="toggleInfo(this)">Curso de Ejemplo 9B
+    <div class="info">Créditos: 3<br>Requisitos: Ninguno<br>Tipo: Práctico</div>
+  </div>
+</div>
+
+<div class="semestre">
+  <h2>Ciclo 10</h2>
+  <div class="curso" onclick="toggleInfo(this)">Curso de Ejemplo 10A
+    <div class="info">Créditos: 4<br>Requisitos: Curso anterior<br>Tipo: Teórico</div>
+  </div>
+  <div class="curso" onclick="toggleInfo(this)">Curso de Ejemplo 10B
+    <div class="info">Créditos: 3<br>Requisitos: Ninguno<br>Tipo: Práctico</div>
+  </div>
+</div>
+
+<script>
+  function toggleInfo(el) {
+    el.classList.toggle("open");
+  }
+</script>
 
 </body>
 </html>
